@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Search a specific Student </title>
+</head>
+<body>
+
+<h3>Enter First Name </h3>
+<div >
+    <form th:action="@{/searchstudent}"  method="post"/>
+        First Name:
+        <input type="text" value ="fname">
+        <input type="submit" value="Search">
+    </form>
+</div>
+<div th:if="">
+
+</div>
+<div th:each="student:${students}">
+    FirstName <input type="text" th:field="*{firstName}" />
+    LastName <input type="text" th:field="*{lastName}" />
+    Major  <input type="text" th:field="*{major}" />
+</div>
+</body>
+</html>
